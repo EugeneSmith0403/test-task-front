@@ -1,0 +1,17 @@
+export enum userEnum {
+  loadUser = '[User] Load Users',
+  loadUserSuccess = '[User] Load Users Success',
+  loadUserFailure = '[User] Load Users Failure',
+  createUser = '[User] create Users',
+  createUserSuccess = '[User] create Users Success',
+  createUserFailure = '[User] create Users Failure',
+  updateUser = '[User] update Users',
+  updateUserSuccess = '[User] update Users Success',
+  updateUserFailure = '[User] update Users Failure',
+  removeUserFromList = '[User] remove User From List',
+  removeUserFromListSuccess = '[User] remove User From List Success',
+  removeUserFromListFailure = '[User] remove User From List Failure',
+  getUserByIdFailure = '[User] getById Users',
+  getUserByIdSuccess = '[User] getById Users Success',
+  getUserById = '[User] getById Users Failure',
+}
