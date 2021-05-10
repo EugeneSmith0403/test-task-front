@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginFormComponent } from './login-form.component';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {Observable, of, Subject} from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Store } from '@ngrx/store';
-import {addMatchers, cold, initTestScheduler} from 'jasmine-marbles';
-import {By} from '@angular/platform-browser';
+import { addMatchers, cold, initTestScheduler } from 'jasmine-marbles';
+import { By } from '@angular/platform-browser';
 
 describe('LoginFormComponent', () => {
     let component: LoginFormComponent;
