@@ -6,20 +6,23 @@ import { loginAction } from '../../store/actions/login.actions';
 import { Observable } from 'rxjs';
 import { isSubmittingSelector, validationErrorsSelector } from '../../store/selectors/login.selectors';
 import { tap } from 'rxjs/operators';
+import {BaseComponent} from '../../../common/components/base-component/base.component';
 
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss']
 })
-export class LoginFormComponent implements OnInit {
+export class LoginFormComponent extends BaseComponent implements OnInit {
   public isSubmitting$: Observable<boolean>;
   public backendErrors$: Observable<IBackendErrors>;
 
   constructor(
     private readonly fb: FormBuilder,
     private readonly store: Store
-  ) { }
+  ) {
+    super();
+  }
 
   public loginForm: FormGroup = this.fb.group({
     email: new FormControl(),

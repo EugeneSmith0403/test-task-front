@@ -7,8 +7,13 @@ import { BaseComponent } from '../base-component/base.component';
   styleUrls: ['./message-error.component.scss']
 })
 export class MessageErrorComponent extends BaseComponent implements OnInit {
-  @Input() messages: string[];
-  @Input() styleMessage: string;
+  @Input() messages?: string[];
+  @Input() styleMessage?: string;
   public defaultStyle = 'danger';
+
+  constructor() {
+    super();
+  }
+
   ngOnInit(): void {}
 }

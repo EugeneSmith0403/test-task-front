@@ -32,7 +32,7 @@ describe('LoginFormComponent', () => {
         }).compileComponents();
 
         fixture = TestBed.createComponent(LoginFormComponent);
-        component = fixture.componentInstance;
+        component = fixture.debugElement.componentInstance;
         fixture.detectChanges();
         store = jasmine.createSpyObj('store', ['dispatch', 'select']);
     });
