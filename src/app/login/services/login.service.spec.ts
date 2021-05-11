@@ -3,10 +3,12 @@ import { LoginService } from './login.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import { IUser } from '../../common/interfaces/state/user';
 import { environment } from '../../../environments/environment';
+import {Subject} from 'rxjs';
 
 describe('LoginService', () => {
     let service: LoginService;
     let httpTestingController: HttpTestingController;
+    const unsubscribe = new Subject<void>();
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -19,6 +21,8 @@ describe('LoginService', () => {
 
     afterEach(() => {
         httpTestingController.verify();
+        unsubscribe.next();
+        unsubscribe.complete();
     });
 
     it('LoginService should be created', () => {

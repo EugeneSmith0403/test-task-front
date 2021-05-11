@@ -43,11 +43,11 @@ describe('LoginFormComponent', () => {
     });
 
 
-    xit('LoginFormComponent should create', () => {
+    it('LoginFormComponent should create', () => {
         expect(component).toBeTruthy();
     });
 
-    xit('LoginFormComponent execute login', () => {
+    it('LoginFormComponent execute login', () => {
         const spy = spyOn(component, 'login').and.callFake(() => undefined);
         component.login({} as Event);
         expect(spy).toHaveBeenCalledWith({} as Event);
