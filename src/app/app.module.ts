@@ -13,12 +13,10 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { AuthInterceptor } from './common/interceptor/auth.interceptor';
 import { loginReducers } from './login/store/reducers/login.reducer';
 import { LoginEffects } from './login/store/effects/login.effects';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
   ],
   imports: [
     BrowserModule,
